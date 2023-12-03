@@ -10,7 +10,12 @@ namespace Obj2Sql
 
             string[] fields = new string[] { "id", "name" };
 
-            ExampleDelete.Run(fields, person);
+            ExampleInsert.Run(fields, person);
+            // ExampleSelect.Run(fields, person);
+            // ExampleUpdate.Run(fields, person);
+            // ExampleDelete.Run(fields, person);
+
+
         }
     }
 }
