@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Obj2Sql.Insert {    
+namespace Obj2Sql.Insert {
     public class ImplReturning<T>: 
         ImplFields<ImplReturning<T>> where T: 
         ImplReturning<T> {
