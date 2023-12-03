@@ -12,21 +12,11 @@ namespace Obj2Sql.Delete {
             foreach (var item in this.sql.Table.Items) {
                 if(item.Name.ToLower().Equals(tableField.ToLower())) {
 
-                    if ( 
-                        typeof(int).ToString().Equals(item.Type) || 
-                        typeof(double).ToString().Equals(item.Type)
-                    ) 
-                        sql.SqlString = sql.SqlString.Replace(
-                            ";", $" where { tableField } = { item.Value };"
-                        );
+                    if (typeof(int).ToString().Equals(item.Type) || typeof(double).ToString().Equals(item.Type)) 
+                        sql.SqlString = sql.SqlString.Replace(";", $" where { tableField } = { item.Value };");
 
-                    if (
-                        typeof(string).ToString().Equals(item.Type) || 
-                        typeof(DateTime).ToString().Equals(item.Type)
-                     ) 
-                        sql.SqlString = sql.SqlString.Replace(
-                            ";", $" where { tableField } = '{ item.Value }';"
-                        );
+                    if (typeof(string).ToString().Equals(item.Type) || typeof(DateTime).ToString().Equals(item.Type)) 
+                        sql.SqlString = sql.SqlString.Replace(";", $" where { tableField } = '{ item.Value }';");
 
                 }
             }

@@ -22,15 +22,9 @@ namespace Obj2Sql.Insert {
             
             foreach (var item in items) {
                 _fields_.Add(item.Name.ToLower());
-                if ( 
-                    typeof(int).ToString().Equals(item.Type) || 
-                    typeof(double).ToString().Equals(item.Type)
-                ) 
+                if ( typeof(int).ToString().Equals(item.Type) || typeof(double).ToString().Equals(item.Type)) 
                     _values_.Add(item.Value.ToString());
-                if (
-                    typeof(string).ToString().Equals(item.Type) || 
-                    typeof(DateTime).ToString().Equals(item.Type)
-                    ) 
+                if (typeof(string).ToString().Equals(item.Type) || typeof(DateTime).ToString().Equals(item.Type)) 
                     _values_.Add($"'{ item.Value.ToString() }'");
             }
 

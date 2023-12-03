@@ -9,10 +9,6 @@ namespace Obj2Sql.Insert
     {
         public T CreateByObject(object o)
         {
-            if(o == null) {
-                throw new Exception();
-            }
-
             sql.SetTable(o);
 
             sql.SqlString = string.Format(

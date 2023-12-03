@@ -13,9 +13,7 @@ namespace Obj2Sql.Insert {
         }
 
         public T Returning(string field) {
-            sql.SqlString = sql.SqlString.Replace(
-                ";", $" returning { field.ToLower() };"
-            );
+            sql.SqlString = sql.SqlString.Replace(";", $" returning { field.ToLower() };");
             return (T)this;
         }
     }// class
