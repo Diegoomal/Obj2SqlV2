@@ -7,11 +7,15 @@ namespace Obj2Sql
             string sqlString = string.Empty;
 
             sqlString = string.Empty;
-            sqlString = Convert.ToString( Obj2Sql.Delete.Instance.Sql.CreateByObject(p).Build() );
+            sqlString = Convert.ToString(
+                Obj2Sql.Delete.Instance.Sql.CreateByObject(p).Build()
+            );
             System.Console.WriteLine(sqlString);
 
             sqlString = string.Empty;
-            sqlString = Convert.ToString( Obj2Sql.Delete.Instance.Sql.CreateByObject(p).WhereCondition("id").Build() );
+            sqlString = Convert.ToString(
+                Obj2Sql.Delete.Instance.Sql.CreateByObject(p).WhereCondition("id").Build()
+            );
             System.Console.WriteLine(sqlString);
         }
     }// class

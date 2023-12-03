@@ -12,11 +12,11 @@ namespace Obj2Sql.Select {
             return (T)this;
         }
 
-        public T Fields(string[] campos) {
-            // sql.SqlString = string.Empty;
-            // string[] camposTabela = this.sql.Tabela.GetOnlyProperties();
-            // string[] diffCampos = campos.Intersect(camposTabela).ToArray();
-            // sql.SqlString = $"select { string.Join(", ", diffCampos) } from { this.sql.Tabela.Nome.ToLower() };";
+        public T Fields(string[] fields) {
+            sql.SqlString = string.Empty;
+            string[] fieldsTable = this.sql.Table.GetProperties();
+            string[] diff_fields = fields.Intersect(fieldsTable).ToArray();
+            sql.SqlString = $"select { string.Join(", ", diff_fields) } from { this.sql.Table.Name.ToLower() };";
             return (T)this;
         }
 

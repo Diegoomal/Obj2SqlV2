@@ -6,11 +6,11 @@ namespace Obj2Sql
         {
             string sqlString = string.Empty;
 
-            // sqlString = string.Empty;
-            // sqlString = Convert.ToString( 
-            //     Obj2Sql.Select.Instance.Sql.CreateByObject(p).Build()
-            // );
-            // System.Console.WriteLine(sqlString);
+            sqlString = string.Empty;
+            sqlString = Convert.ToString( 
+                Obj2Sql.Select.Instance.Sql.CreateByObject(p).Build()
+            );
+            System.Console.WriteLine(sqlString);
 
             // sqlString = string.Empty;
             // sqlString = Convert.ToString( 

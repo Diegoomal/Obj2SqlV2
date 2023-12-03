@@ -12,7 +12,7 @@ namespace Obj2Sql.Select {
 
             // field = field.ToLower();
             // Item[] items = this.sql.Table.Items;
-            // foreach (var item in items) {                
+            // foreach (var item in items) {
             // }
 
             return (T)this;

@@ -8,8 +8,8 @@ namespace Obj2Sql.Select {
         SqlBuilder where T: 
         Create<T> {
         public T CreateByObject(object o) {
-            // this.sql.SetTable(o);
-            // this.sql.SqlString = $"select { string.Join(", ", this.sql.Table.GetProperties()) } from { this.sql.Table.Name.ToLower() };";
+            this.sql.SetTable(o);
+            this.sql.SqlString = $"select { string.Join(", ", this.sql.Table.GetProperties()) } from { this.sql.Table.Name.ToLower() };";
             return (T)this;
         }
     }// class
