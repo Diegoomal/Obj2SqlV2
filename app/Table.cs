@@ -47,7 +47,8 @@ namespace Obj2Sql
 
         public override string ToString()
         {
-            return $"Name: { this.Name ?? string.Empty }";
+            return $"Name: { this.Name }";
         }
-    }
-}
+    
+    }// class
+}// namespace

@@ -15,5 +15,5 @@ namespace Obj2Sql.Delete
             
             return (T)this;
         }
-    }
-}
+    }// class
+}// namespace
