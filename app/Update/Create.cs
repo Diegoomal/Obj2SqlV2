@@ -24,6 +24,8 @@ namespace Obj2Sql.Update
                 fieldsValues.Add(sAux);
             }
 
+            this.sql.SqlString = $"update { this.sql.Table.Name } set { string.Join(", ", fieldsValues.ToArray()) };";
+
             return (T)this;
         }
     }// class

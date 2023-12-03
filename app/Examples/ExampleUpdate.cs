@@ -12,11 +12,11 @@ namespace Obj2Sql
             );
             System.Console.WriteLine(sqlString);
 
-            sqlString = string.Empty;
-            sqlString = Convert.ToString(
-                Obj2Sql.Update.Instance.Sql.CreateByObject(p).Fields(fields).Build()
-            );
-            System.Console.WriteLine(sqlString);
+            // sqlString = string.Empty;
+            // sqlString = Convert.ToString(
+            //     Obj2Sql.Update.Instance.Sql.CreateByObject(p).Fields(fields).Build()
+            // );
+            // System.Console.WriteLine(sqlString);
 
             sqlString = string.Empty;
             sqlString = Convert.ToString(
@@ -24,11 +24,11 @@ namespace Obj2Sql
             );
             System.Console.WriteLine(sqlString);
 
-            sqlString = string.Empty;
-            sqlString = Convert.ToString(
-                Obj2Sql.Update.Instance.Sql.CreateByObject(p).Fields(fields).WhereCondition("id").Build()
-            );
-            System.Console.WriteLine(sqlString);
+            // sqlString = string.Empty;
+            // sqlString = Convert.ToString(
+            //     Obj2Sql.Update.Instance.Sql.CreateByObject(p).Fields(fields).WhereCondition("id").Build()
+            // );
+            // System.Console.WriteLine(sqlString);
         }
     }// class
 }// namespace
