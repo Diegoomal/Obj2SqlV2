@@ -1,16 +1,17 @@
-# exemplo implementação docker
+# Obj2Sql - **docker** e **dotnet core**
 
-Primeiros passos com **docker** e **dotnet core**
+The project has been implemented with the Fluent Interface design pattern and is designed to create SQL commands using the reflection library.
 
-## Execução
 
-### Compilação do projeto
+## To Execute project
+
+### Create docker image
 
  ```
 docker image build -t img_app_obj2sql .
 ```
 
-### Execução do projeto
+### Execute docker image
 
  ```
 docker run img_app_obj2sql
