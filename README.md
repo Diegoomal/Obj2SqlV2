@@ -9,7 +9,9 @@ Person person = new Person() { Id = 1, Name = "Diego", Lastname = "Maldonado" };
 
 string[] fields = new string[] { "id", "name" };
 
-string sqlString = Convert.ToString(Obj2Sql.Insert.Instance.Sql.CreateByObject(p).Build());
+string sqlString = Convert.ToString(
+    Obj2Sql.Insert.Instance.Sql.CreateByObject(p).Fields(fields).Returning("id").Build()
+);
 
 System.Console.WriteLine(sqlString);
 
@@ -17,7 +19,7 @@ System.Console.WriteLine(sqlString);
 
 output
 ```
-insert into person (id, name, lastname) values (1, 'Diego', 'Maldonado');
+insert into Person (id, name) values (1, 'Diego') returning id;
 ```
 
 ## To Execute project
