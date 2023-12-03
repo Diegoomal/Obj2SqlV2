@@ -10,18 +10,8 @@ namespace Obj2Sql
         public string? Name { get; set; }
         public Item[]? Items { get; set; }
 
-        public Table()
-        {
-            this.Name = string.Empty;
-            this.Items = Array.Empty<Item>();
-        }
-
         public string[] GetProperties()
         {
-            if (this.Items == null) {
-                throw new ArgumentNullException(nameof(this.Items));
-            }
-
             List<string> lst = new List<string>();
             
             foreach (var item in this.Items)
@@ -31,30 +21,21 @@ namespace Obj2Sql
         }
 
         public string[] GetValues()
-        {
-            if (this.Items == null) {
-                throw new ArgumentNullException(nameof(this.Items));
-            }
-            
+        {            
             List<string> lst = new List<string>();
             
-            foreach (var item in this.Items)
-            {
+            foreach (var item in this.Items) {
                 if (
-                    item.Type == typeof(int).ToString() || 
-                    item.Type == typeof(double).ToString()
-                    ) 
-                {
-                    lst.Add(item.Value?? string.Empty);
-                }
+                    typeof(int).ToString().Equals(item.Type) || 
+                    typeof(double).ToString().Equals(item.Type)
+                ) 
+                    lst.Add(item.Value);
                 
                 if (
-                    item.Type == typeof(string).ToString() || 
-                    item.Type == typeof(DateTime).ToString()
-                    ) 
-                {
+                    typeof(string).ToString().Equals(item.Type) || 
+                    typeof(DateTime).ToString().Equals(item.Type)
+                )
                     lst.Add($"'{item.Value}'");
-                }
             }
             return lst.ToArray();
         }
