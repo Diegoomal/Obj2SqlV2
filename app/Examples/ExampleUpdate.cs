@@ -22,13 +22,13 @@ namespace Obj2Sql
 
             sqlString = string.Empty;
             sqlString = Convert.ToString(
-                Obj2Sql.Update.Instance.Sql.CreateByObject(p).Fields().WhereCondition("id").Build()
+                Obj2Sql.Update.Instance.Sql.CreateByObject(p).Fields().Where("id").Build()
             );
             System.Console.WriteLine(sqlString);
 
             // sqlString = string.Empty;
             // sqlString = Convert.ToString(
-            //     Obj2Sql.Update.Instance.Sql.CreateByObject(p).Fields(fields).WhereCondition("id").Build()
+            //     Obj2Sql.Update.Instance.Sql.CreateByObject(p).Fields(fields).Where("id").Build()
             // );
             // System.Console.WriteLine(sqlString);
         }

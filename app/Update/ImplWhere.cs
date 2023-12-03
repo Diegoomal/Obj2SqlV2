@@ -7,7 +7,7 @@ namespace Obj2Sql.Update {
     
     public class ImplWhere<T> : ImplFields<ImplWhere<T>> where T : ImplWhere<T>
     {
-        public T WhereCondition(string tableField)
+        public T Where(string tableField)
         {
 
             Item[] items = this.sql.Table.Items.ToArray();

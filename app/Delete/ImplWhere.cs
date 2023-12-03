@@ -7,7 +7,7 @@ namespace Obj2Sql.Delete
 {
     public class ImplWhere<T> : Create<ImplWhere<T>> where T : ImplWhere<T>
     {
-        public T WhereCondition(string tableField)
+        public T Where(string tableField)
         {
             foreach (var item in this.sql.Table.Items) {
                 if(!item.Name.ToLower().Equals(tableField.ToLower())) continue;

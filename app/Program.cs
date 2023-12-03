@@ -14,8 +14,6 @@ namespace Obj2Sql
             ExampleSelect.Run(fields, person);
             ExampleUpdate.Run(fields, person);
             ExampleDelete.Run(fields, person);
-
-
         }
-    }
-}
+    }// class
+}// namespace

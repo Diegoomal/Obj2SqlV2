@@ -16,7 +16,7 @@ namespace Obj2Sql
 
             sqlString = string.Empty;
             sqlString = Convert.ToString(
-                Obj2Sql.Delete.Instance.Sql.CreateByObject(p).WhereCondition("id").Build()
+                Obj2Sql.Delete.Instance.Sql.CreateByObject(p).Where("id").Build()
             );
             System.Console.WriteLine(sqlString);
         }

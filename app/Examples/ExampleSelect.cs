@@ -29,7 +29,7 @@ namespace Obj2Sql
 
             sqlString = string.Empty;
             sqlString = Convert.ToString( 
-                Obj2Sql.Select.Instance.Sql.CreateByObject(p).Fields().Where("nome").Build()
+                Obj2Sql.Select.Instance.Sql.CreateByObject(p).Fields().Where("name").Build()
             );
             System.Console.WriteLine(sqlString);
 
