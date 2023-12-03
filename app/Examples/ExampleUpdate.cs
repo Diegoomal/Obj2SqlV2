@@ -4,6 +4,8 @@ namespace Obj2Sql
     {
         public static void Run(string[] fields, Person p)
         {
+            System.Console.WriteLine("UPDATE");
+
             string sqlString = string.Empty;
 
             sqlString = string.Empty;
