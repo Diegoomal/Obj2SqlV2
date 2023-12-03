@@ -12,30 +12,30 @@ namespace Obj2Sql
             );
             System.Console.WriteLine(sqlString);
 
-            // sqlString = string.Empty;
-            // sqlString = Convert.ToString( 
-            //     Obj2Sql.Select.Instance.Sql.CreateByObject(p).Fields(campos).Build()
-            // );
-            // System.Console.WriteLine(sqlString);
+            sqlString = string.Empty;
+            sqlString = Convert.ToString( 
+                Obj2Sql.Select.Instance.Sql.CreateByObject(p).Fields(fields).Build()
+            );
+            System.Console.WriteLine(sqlString);
 
 
-            // sqlString = string.Empty;
-            // sqlString = Convert.ToString( 
-            //     Obj2Sql.Select.Instance.Sql.CreateByObject(p).Fields().Where("id").Build()
-            // );
-            // System.Console.WriteLine(sqlString);
+            sqlString = string.Empty;
+            sqlString = Convert.ToString( 
+                Obj2Sql.Select.Instance.Sql.CreateByObject(p).Fields().Where("id").Build()
+            );
+            System.Console.WriteLine(sqlString);
 
-            // sqlString = string.Empty;
-            // sqlString = Convert.ToString( 
-            //     Obj2Sql.Select.Instance.Sql.CreateByObject(p).Fields().Where("nome").Build()
-            // );
-            // System.Console.WriteLine(sqlString);
+            sqlString = string.Empty;
+            sqlString = Convert.ToString( 
+                Obj2Sql.Select.Instance.Sql.CreateByObject(p).Fields().Where("nome").Build()
+            );
+            System.Console.WriteLine(sqlString);
 
-            // sqlString = string.Empty;
-            // sqlString = Convert.ToString( 
-            //     Obj2Sql.Select.Instance.Sql.CreateByObject(p).Fields(campos).Where("id").Build()
-            // );
-            // System.Console.WriteLine(sqlString);
+            sqlString = string.Empty;
+            sqlString = Convert.ToString( 
+                Obj2Sql.Select.Instance.Sql.CreateByObject(p).Fields(fields).Where("id").Build()
+            );
+            System.Console.WriteLine(sqlString);
         }
     }// class
 }// namespace
