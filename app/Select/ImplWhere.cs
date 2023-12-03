@@ -8,12 +8,17 @@ namespace Obj2Sql.Select {
         ImplFields<ImplWhere<T>> where T: 
         ImplWhere<T> {
 
-        public T Where(string field) {
+        public T Where(string tableField) {
 
-            // field = field.ToLower();
-            // Item[] items = this.sql.Table.Items;
-            // foreach (var item in items) {
-            // }
+            Item[] items = this.sql.Table.Items.ToArray();
+            
+            foreach (var item in items) {                
+                if(!item.Name.ToLower().Equals(tableField)) continue;
+                if ( typeof(int).ToString().Equals(item.Type) || typeof(double).ToString().Equals(item.Type)) 
+                    sql.SqlString = sql.SqlString.Replace(";", $" where { tableField } = { item.Value };");
+                if (typeof(string).ToString().Equals(item.Type) || typeof(DateTime).ToString().Equals(item.Type)) 
+                    sql.SqlString = sql.SqlString.Replace(";", $" where { tableField } = '{ item.Value }';");
+            }
 
             return (T)this;
         }
